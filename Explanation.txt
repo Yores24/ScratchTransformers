@@ -1,0 +1,24 @@
+Class input embedding
+
+Isme hum basically bas jo words h unko vector form m ya ek aise form m krra which are acceptable by model
+and we are using the embedding function present in torch
+
+
+Class Positional Encoding
+
+Issme hum basically jo words h unko unki positions k hisab se rkhre mtlb kiska kaha kya importance h aur isme hum ek formula bhi lagare even aur odd positions k liye
+woh notes m likha h fir hum bas inko aake forward krdere h humare embedded matrix k sath add krke
+
+Class LayerNormalization:
+
+Isme hum basically hum jo normalization wali layer implement krre h mean aur std dev se but hum isme hum 2 naye param use krre
+alpha jo multiplicative h aur beta jo additive aur dono learnable h yeh isliye h taki humari value bas (0,1) k beech hi na ghumte rahe
+prr aur bhi value aaye depending on the values isliye learnable h
+
+class feedforwardblock:
+
+yeh basically ek common function h jo encoder decoder dono m lgra aur yeh bas jo humare vector h usko ek layer se
+dusre m bhejra dimensions change krke taki woh aage k liye thik ho
+        # (batch,seq_len,d_model)-->(batch,seq_len,d_ff)-->(batch,seq_len,d_model)
+aise
+
