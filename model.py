@@ -141,6 +141,21 @@ class MutiHeadAttentionBloack(nn.Module):
         # (batch,seqlen,dmodel)-->(batch,seqlen,dmodel)
         return self.w_o(x)
     
+class ResidualConnection(nn.Module):
+
+    def __init__(self,dropout:float)->None:
+
+        super().__init__()
+        self.dropout=nn.Dropout(dropout)
+        self.norm=LayerNormalization()
+# Yaha hum add norm layer lere h kyuki hum issi m apni previous layer bhejre
+    def forward(self,x,sublayer):
+# over hear we can see ki hum jo humare previous layer h sublayer usko hum usse add krdere h
+        return x+self.dropout(sublayer(self.norm(x)))
+    
+    
+
+# creating the encoder block
 
 
 
