@@ -22,3 +22,10 @@ dusre m bhejra dimensions change krke taki woh aage k liye thik ho
         # (batch,seq_len,d_model)-->(batch,seq_len,d_ff)-->(batch,seq_len,d_model)
 aise
 
+class MultiheadAttentionBlock:
+
+Isme hum bahut kuch krre h notes m dekhna aur to summarize:
+jo input h usko 3 jagah bhejre h as a query ,key, value fir ek weigth matrix se multiply krre
+fir in 3 matrix ko jitne head h unme divide krre multi head naam h na block ka fir 
+yeh 3 head m attention ka formula lagare h aur last m saare heads ko concat krdere h 
+Explaination aur formula k liye notes m likha h 
