@@ -34,3 +34,6 @@ Explaination aur formula k liye notes m likha h
 Class residual connection:
 ab isme hum bas woh functionality implement krre h ki hum previous layer ko add norm m bhejre h so woh 
 hum krre h 
+
+class EncoderBlock:
+
